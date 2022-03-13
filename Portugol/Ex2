@@ -1,0 +1,82 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//Mensagem de Bem Vindo
+		escreva("Ola, Seja muito bem vindo a Programers Shop!!")
+
+		//Exibindo informaçoes do menu
+		escreva("Para efetuar seu pedido sera preciso se cadastrar primeiramente! \n Por favor responda as perguntas a baixo!")
+
+		//Perguntas de cadastro
+		cadeia nome
+		escreva("\n Primeiro qual seu nome:")
+		leia(nome)
+
+		cadeia sobrenome
+		escreva("\n Sobrenome:")
+		leia(sobrenome)
+
+		inteiro idade
+		escreva ("\n Idade:")
+		leia(idade)
+
+		cadeia endereco
+		escreva("\n Endereço:")
+		leia(endereco)
+
+		cadeia pagamento
+		escreva("\n Qual sua forma habitual de pagamento online:")
+		leia(pagamento)
+
+		//reapresentado informaçoes
+		escreva("\n Perfeito, anotamos todas as informaçoes, poderia por favor confirmar se estao certas?.")
+		escreva("\n", nome,"\n", sobrenome,"\n", idade,"\n", endereco,"\n", pagamento)
+		escreva("\n Para confirmar se esta certo ou errado, digite 1 para Sim ou 2 para Nao: ")
+		//identificando se informaçoes estao certas
+		inteiro op2 = 2
+		leia(op2)
+
+		se (op2 == 2){
+			 //Correçao do cadastro
+			 escreva("Sem problemas, vamos fazer o cadastro novamente!")
+			 
+			 escreva("\n Primeiro qual seu nome:")
+		leia(nome)
+			 escreva("\n Sobrenome:")
+		leia(sobrenome)
+			 escreva ("\n Idade:")
+		leia(idade)
+			 escreva("\n Endereço:")
+		leia(endereco)
+			 escreva("\n Qual sua forma habitual de pagamento online:")
+		leia(pagamento)
+
+			escreva("\n Pronto agora deve estar tudo certo neh!")
+			escreva("\n", nome,"\n", sobrenome,"\n", idade,"\n", endereco,"\n", pagamento)
+		} senao {
+
+			//Cadastro correto
+			escreva("Otimo vamos seguir em frente!")
+		}
+			//Continuaçao apos o cadastro
+          	escreva("\n Agora escolha oque voce gostaria: \n 1- Produtos \n 2-Serviços \n : ")
+
+		//Opçoes
+		inteiro opp1 = 1
+		leia(opp1)
+		inteiro opp2 = 2
+		leia(opp2)
+
+		se (opp1 == 1){
+			escreva("\n Voce escolheu a opçao de produtos!! \n Infelizmente estamos sem produtos disponiveis no momento!")
+		} senao se (opp2 == 2){
+			escreva("\n Voce escolheu a opçao de serviços!! \n Infelizmente estamos sem serviços disponiveis no momento!")
+		} senao {
+			escreva("Nao conseguimos entender sua resposta!!")
+		}
+
+		escreva("\n Muito obrigado pela preferencia, esperamos ter lhe ajudado com seu problema, volte sempre!")
+	}
+}
