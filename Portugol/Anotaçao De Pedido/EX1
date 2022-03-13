@@ -1,0 +1,50 @@
+programa {
+	
+	funcao inicio()
+	{
+
+			//Anotar um pedido e suas informaçoes de entrega
+			//Mostre na tela de maneira organizada as informaçoes e a data de entrega de um produto
+
+				//Mensagem de Bem Vindo
+				escreva ("Ola!, seja muito bem vindo a Programers Shop! \n")
+				
+				//Coletar informaçao sobre o produto
+				cadeia produto
+				escreva ("Porfavor me informe o nome do produto: \n")
+				leia (produto)
+
+				//Coletar informaçao sobre a quantidade desejada
+				inteiro quantidade
+				escreva ("Qual a quantidade de ", produto, " voce gostaria?: \n")
+				leia (quantidade)
+
+				//Criando uma sensaçao de atendimento qualificado
+				escreva ( "Perfeito estamos verificando a disponibilidade deste produto!")
+			
+
+				//Informando sobre a disponibilidade do produto e preço
+				escreva ("\n Este produto esta disponivel!! \n O valor unitario do ", produto, " e de 2,00R$. \n O valor total dos produtos ficara em ", quantidade * 2)
+			
+			//informaçoes de entrega
+				escreva ("\n Agora coletaremos suas informaçoes de entrega!, Porfavor responda as perguntas a baixo.")
+
+				//Endereço
+				cadeia endereco
+				escreva ("\n Qual o seu endereço? estado, cidade, bairro, rua, numero, cep \n")
+				leia (endereco)
+				
+               	//Forma de pagamento
+				cadeia pagamento
+				escreva("Perfeito. \n Para a forma de pagamento nos aceitamos: boleto, cartao de credito, transferencia bancaria, pix \n Qual forma de pagamento gostaria de escolher? \n")
+				leia (pagamento)
+
+				//Nome
+				cadeia nome
+				escreva ("Para finalizarmos, nos informe o seu nome ou nome da empresa que esta encomendando: \n")
+				leia (nome)
+
+			//Mensagem final do pedido
+				escreva ("Seu pedido: \n Produto: ", produto, "\n Quantidade: ", quantidade, "\n Nome do fornecedor: Programers Shop \n Nome do comprador: ", nome, "\n O endereço de entrega e: ", endereco, "\n A forma de pagamento sera: ", pagamento, "\n Valor total do pedido ", quantidade * 2,"reais \n Prazo de entrega: Nossa empresa estipula um prazo maximo de 15 dias apos a data de pagamento do pedido!!")
+	}
+}
