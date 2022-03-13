@@ -1,0 +1,82 @@
+//Comando para funcionamento do prompt
+const prompt = require('prompt-sync')();
+
+//Mensagem de inicio
+console.log(`Ola, seja Bem Vindo ao nosso verificador de numeros.`)
+
+//informaçoes do usuario
+const nome = prompt(`Primeiramente precisamos do seu nome: `)
+
+//Executando e criando a funçao
+verificacao()
+function verificacao(){
+
+//Numero que sera verificado
+const num = parseFloat(prompt(`Qual o numero que voce gostaria de verificar?`))
+
+//Validando o numero
+console.log(`Perfeito ${nome} estamos verificando o numero: ${num}`)
+
+//Verificaçao
+if (num >= 1) {
+    console.log(`O numero ${num} e positivo`)
+    finalizacao()
+
+} else if (num == 0) {
+    redirecionamento()
+
+} else {
+    console.log(`O numero ${num} e negativo!!`)
+    finalizacao()
+}
+}
+
+//Funçao de redirecionamento caso a escolha seja 0
+function redirecionamento(){
+   
+     console.log(`infelizmeente o numero 0 nao pode ser verificado, pois ele nao e positivo e nem negativo. \n Vamos tentar novamente!!`)
+
+    verificacao()
+}
+
+//Finalizaçao e talvez redirecionamento para o inicio
+function finalizacao(){
+console.log(`Este foi o resultado da sua verificaçao!`)
+
+const restart = prompt(`Gostaria de verificar mais algum numero?`)
+
+if (restart == 'sim' || restart == 'SIM' || restart == `Sim` || restart == `s` || restart == `S` || restart == `Gostaria` || restart == `gostaria`){
+       //Sim
+        verificacao()
+} else if (restart == `N` || restart == `n` || restart == `Nao` || restart == `nao`){
+        //Nao
+        console.log(`Ok ${nome}, entao meu trabalho por aqui terminou \n Obrigado por preferir nosso verificador!!`)
+} else {
+         //Mensagem imcompativel
+        imcompativelmsg()
+}
+}
+
+//Caso mensagem imcompativel
+function imcompativelmsg() {
+
+console.log(`Desculpe ${nome}, mas eu nao consegui entender sua resposta.`)
+const restart2 = prompt(`Porfavor responda novamente com SIM ou NAO.`)
+
+if (restart2 == 'sim' || restart2 == 'SIM' || restart2 == `Sim` || restart2 == `s` || restart2 == `S` || restart2 == `Gostaria` || restart2 == `gostaria`){
+        //Sim
+         verificacao()
+
+ } else if (restart == `N` || restart == `n` || restart == `Nao` || restart == `nao`){
+         //Nao
+         console.log(`Ok ${nome}, entao meu trabalho por aqui terminou \n Obrigado por preferir nosso verificador!!`)
+
+ } else {
+          //Mensagem imcompativel
+         console.log(`Desculpe ${nome}, mas eu nao consegui entender sua resposta. \n Porfavor responda novamente com SIM ou NAO.`)
+         imcompativelmsg()
+ }
+}
+
+/*Foi necessario a criaçao de 2 tipos de variavel "restart", 
+pois ela e possivel de ser utilizada somente dentro de seu escopo, porem os IF`s estavam em funçoes diferentes.*/
