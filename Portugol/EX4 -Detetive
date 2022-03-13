@@ -1,0 +1,72 @@
+programa
+{
+	
+//Jogo de detetive
+	
+	funcao inicio()
+	{
+	//Mensagem de Bem Vindo
+		escreva("Ola, seja Bem Vindo ao nosso teste de inocencia!! \n Por favor responda as perguntas a baixo utilizando somente Sim e Nao!!")
+
+	//Variaveis
+	cadeia resposta
+	inteiro pontos = 0
+
+	//Perguntas
+
+//Primeira pergunta
+	escreva("\n Primeira Pergunta: \n")
+	escreva("Voce tentou fazer algo para reverter ou controlar a situaçao ocorrida?: ")
+		leia(resposta)
+
+	se (resposta == "sim"){
+		pontos += 10
+	} senao {}
+
+//Segunda Pergunta
+	escreva("\n Segunda Pergunta: \n")
+	escreva("Voce se sentiu mal apos a situaçao ocorrida?: ")
+		leia(resposta)
+
+	se (resposta == "sim"){
+		pontos += 10
+	} senao {}
+
+//Terceira Pergunta
+	escreva("\n Terceira Pergunta: ")
+	escreva("\n Se voce pudesse voltar no tempo, voce teria impedido este acontecimento?: ")
+		leia(resposta)
+
+	se (resposta == "sim"){
+		pontos += 10
+	} senao {}
+
+//Quarta Pergunta
+	escreva("\n Quarta Pergunta: \n")
+	escreva("Voce se sente culpado pela situaçao?:")
+	 	leia(resposta)
+
+	se (resposta == "sim"){
+		pontos += 10
+	} senao {}
+
+//Quinta Pergunta
+	escreva("\n Quinta Pergunta: \n")
+	escreva("Voce se sente inocente pela situaçao?: ")
+	 	leia(resposta)
+
+	 se (resposta == "sim"){
+		pontos += 10
+	} senao {}
+
+//Resultado das respostas
+	se (pontos >= 40){
+		escreva("Voce foi classificado como CULPADO!!")
+	} senao se (pontos == 30){
+		escreva("Voce foi classificado como SUSPEITO!!")
+	} senao {
+		escreva("Voce foi classificado como INOCENTE!!")
+	}
+
+	}
+}
