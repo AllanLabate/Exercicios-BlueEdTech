@@ -1,0 +1,60 @@
+//Variavel para funcionamento do promp
+const prompt = require('prompt-sync')();
+
+//Mensagem de Bem Vindo
+console.log(`Ola, seja muito Bem Vindo a Programers Shop!!`);
+
+//Login
+const registro = prompt(`Cadastro ou login \n 1-Fazer login \n 2-Fazer cadastro \n :`);
+
+//Escolhas do menu
+if (registro == `login` || registro == `Login` || registro == `1`) {
+
+    //Escolha numero 1 = Login
+    console.log(`Perfeito, ficamos felizes em saber que voce ja possui seu cadastro em nossa loja!! \n Para fazer seu login, nos informe: `);
+    const nomelog = prompt(`Nome: `)
+    const gmaillog = prompt(`Gmail: `)
+    const senhalog = prompt(`Senha: `)
+
+    console.log(`Perfeito ${nomelog}, agora voce ja esta logado em nossa loja!!`)
+
+} else {
+    //Escolha numero 2 = Cadastro
+    console.log('Vamos fazer seu cadastro!!')
+
+    const nomecad = prompt('Nome: ')
+    const idadecad = parseFloat(prompt(`Idade: `))
+    const enderecocad = prompt(`Endereço: `)
+    const gmailcad =  prompt(`Gmail: `)
+    const senhacad = prompt(`Senha: `)
+    const senhaconf = prompt(`Confirme sua senha: `)
+
+    console.log(`Perfeito, agora voce esta cadastrado em nossa loja!! \n Nao esqueça de guardar suas informaçoes de login logo a baixo!`)
+    console.log(`\n ${nomecad} \n ${idadecad} \n ${enderecocad} \n ${gmailcad} \n ${senhacad} ${senhaconf}`)
+}
+
+//Primeiro menu apos o cadastro
+console.log(` \n Bom, Agora que ja esta cadastrado, vamos a parte mais importante!!`)
+console.log(`\n Menu: `)
+const menu1 = prompt(`\n 1-Serviços \n 2-Produtos \n : `)
+
+if (menu1 == `Serviços` || menu1 == `serviços` || menu1 == `1`) {
+    //Caso a pessoa escolha opçao de servicos
+        servicos()
+
+} else {
+    //Caso a pessoa escolha opçao de produtos
+        produtos()
+}
+
+//Funçao para os Serviços
+function servicos(){
+    console.log('Menu -> Serviços')
+    console.log(`\n Infelizmente nos nao temos serviços disponiveis no momento!!`)
+}
+
+//Funçao para os Produtos
+function produtos(){
+    console.log(`Menu -> Produtos`)
+    console.log(`\n Infelizmente nos nao temos produtos disponiveis no momento!!`)
+}
